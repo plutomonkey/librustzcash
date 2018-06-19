@@ -1,5 +1,6 @@
 extern crate bellman;
 extern crate blake2_rfc;
+extern crate bn;
 extern crate byteorder;
 extern crate libc;
 extern crate pairing;
@@ -8,6 +9,10 @@ extern crate sapling_crypto;
 
 #[macro_use]
 extern crate lazy_static;
+
+mod bn254;
+
+pub use bn254::librustzcash_plutomonkey_sprout_verifier;
 
 use pairing::{
     bls12_381::{Bls12, Fr, FrRepr}, BitIterator, Field, PrimeField, PrimeFieldRepr,
